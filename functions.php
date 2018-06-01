@@ -341,6 +341,14 @@ function zaura_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'zaura_widget_tag_cloud_args' );
 
+function zaura_get_icon( $icon_name ) {
+    $svg_icons = get_parent_theme_file_path( '/assets/icons/'. $icon_name .'.svg' );
+    
+   	if ( file_exists( $svg_icons ) ) {
+		require_once( $svg_icons );
+	}
+}
+
 /**
  * Implement the Custom Header feature.
 
