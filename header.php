@@ -18,8 +18,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
-  <link rel="stylesheet" type="text/css" href="https://www.proactivaopenarms.org/assets/app.ed8551ef.css">
 <?php wp_head(); ?>
 </head>
 
@@ -29,8 +27,9 @@
 		<?php if ( has_nav_menu( 'top' ) ) {
             get_template_part( 'template-parts/navigation/navigation', 'top' );
         } 
-        get_template_part( 'template-parts/header/header', 'front-page' ); ?>
-<?php else : ?>
+        get_template_part( 'template-parts/header/header', 'front-page' ); 
+    
+else : ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
