@@ -1,0 +1,90 @@
+<!--
+                <div id="carouselFrontPage" class="carousel slide" data-ride="carousel" data-pause="false">
+                    <div class="carousel-inner">
+                     <button class="btn btn-outline-warning btn-lg" type="button" id="coneix-button" onclick="window.scroll({top: window.innerHeight,behavior: 'smooth'})">Coneix-nos!</button>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="http://local.wordpress.test/wp-content/uploads/2018/06/IMG_6680.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Primera Fotografia</h5>
+                                <p>Campaments de refugiats del Sàhara Occidental</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="http://local.wordpress.test/wp-content/uploads/2018/06/IMG_6680.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h5>Segona Fotografia</h5>
+                                    <p>Nisi scelerisque eu ultrices vitae auctor eu. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Aliquam id diam maecenas ultricies mi eget. Rhoncus dolor purus non enim.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="http://local.wordpress.test/wp-content/uploads/2018/06/IMG_6680.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tercera fotografia</h5>
+                                    <p>Nisi scelerisque eu ultrices vitae auctor eu. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Aliquam id diam maecenas ultricies mi eget. Rhoncus dolor purus non enim.</p>
+                            </div>
+                    </div>
+                </div>
+--> 
+<!--
+<style>
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align:center;
+}
+.carousel-caption {
+/*    background: -moz-linear-gradient(left, rgba(61,28,0,0.4) 0%, rgba(255,255,255,0) 100%); 
+    background: -webkit-linear-gradient(left, rgba(61,28,0,0.4) 0%,rgba(255,255,255,0) 100%); 
+    background: linear-gradient(to right, rgba(61,28,0,0.4) 0%,rgba(255,255,255,0) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ffffff', endColorstr='#00ffffff',GradientType=1 ); 
+    width:50%;
+    left:0;
+    padding:20px;
+    padding-right:100px;
+    text-align: justify;
+    text-justify: inter-word;*/
+}
+#coneix-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 1030;
+}
+.front-page-content{
+    margin-top:50px;
+}
+</style>
+
+                <div id="carouselFrontPage" class="carousel slide" data-ride="carousel" data-pause="false">
+                    <div class="carousel-inner">
+                     <button class="btn btn-outline-warning btn-lg" type="button" id="coneix-button" onclick="window.scroll({top: window.innerHeight,behavior: 'smooth'})">Coneix-nos!</button>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="http://local.wordpress.test/wp-content/uploads/2018/06/IMG_6680.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Primera Fotografia</h5>
+                                <p>Campaments de refugiats del Sàhara Occidental</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="http://local.wordpress.test/wp-content/uploads/2018/06/IMG_6680.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h5>Segona Fotografia</h5>
+                                    <p>Nisi scelerisque eu ultrices vitae auctor eu. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Aliquam id diam maecenas ultricies mi eget. Rhoncus dolor purus non enim.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="http://local.wordpress.test/wp-content/uploads/2018/06/IMG_6680.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tercera fotografia</h5>
+                                    <p>Nisi scelerisque eu ultrices vitae auctor eu. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Aliquam id diam maecenas ultricies mi eget. Rhoncus dolor purus non enim.</p>
+                            </div>
+                    </div>
+                </div>
+			</header><!-- .entry-header -->

@@ -44,6 +44,8 @@ function zaura_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'zaura-featured-image', 2000, 1200, true );
+	
+	add_image_size( 'zaura-logo-navbar', 30, 30, true );
 
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
@@ -80,9 +82,7 @@ function zaura_setup() {
 
 	// Add theme support for Custom Logo.
 	add_theme_support( 'custom-logo', array(
-		'width'       => 250,
-		'height'      => 250,
-		'flex-width'  => true,
+		'size' => 'zaura-logo-navbar'
 	) );
 
 	// Add theme support for selective refresh for widgets.
@@ -230,15 +230,36 @@ add_action( 'wp_head', 'zaura_pingback_header' );
 function zaura_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'zaura-fonts', zaura_fonts_url(), array(), null );
+	
+	// Add Bootstrap stylesheet
+	wp_enqueue_style( 'zaura-bootstrap-style', "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css", array(), null );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'zaura-style', get_stylesheet_uri() );
+	
+	// Add jQuery
+	wp_enqueue_script( 'zaura-jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js');
+	
+	// Add Popper.js lib
+	wp_enqueue_script( 'zaura-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js');
+	
+	// Add Bootstrap scripts
+    wp_enqueue_script( 'zaura-bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'zaura_scripts' );
+
+
+/**
+* Enqueue Bootstrap scripts and styles
+*/
+function zaura_bootstrap_scripts() {
+    wp_enqueue_style( 'zaura-bootstrap-style', "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css", array(), null );
+}
+add_action( 'wp_enqueue_scripts', 'zaura_bootstrap_scripts' );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -348,6 +369,12 @@ function zaura_get_icon( $icon_name ) {
 		require_once( $svg_icons );
 	}
 }
+
+/**
+ * Implement custom nav walker to integrate Bootstrap.
+ */
+ 
+require get_parent_theme_file_path( '/inc/bootstrap-navwalker.php' );
 
 /**
  * Implement the Custom Header feature.
